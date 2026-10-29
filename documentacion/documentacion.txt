@@ -1,0 +1,24 @@
+Proyecto: MC Wallet - Billetera Virtual
+Alumno: Marcela Cortes 
+Fecha: Noviembre 2026
+Materia: Desarrollo Web - Trabajo Final
+ 
+PROMPT 1 - Paleta de colores:
+"Quiero usar esta paleta exacta que me gusta: #2A3056 #43B0AF #67FFF2 
+#294933 #446B5C #81EC86 de la imagen de Luca Davincci. Es estilo neon 
+nocturno cyber-city. Adaptame el CSS para que quede fintech."
+
+Respuesta de la IA: Generó variables :root con --c1 a --c6 y mapeo a 
+--primario, --secundario, --acento, etc. y explicación de cada color.
+
+PROMPT 2 - Documentación:
+"Generame el README.md que pide el profe con escuela, carrera, materia, 
+nombre, descripción, objetivo, tecnologías, paleta y sitios de referencia, 
+y el archivo prompts-ia.txt para la carpeta Documentacion."
+
+Respuesta de la IA: Generó ambos archivos listos para entrega en GitHub y Netlify.
+
+CONCLUSIÓN:
+Toda la maquetación, elección de colores y redacción final fue revisada 
+y adaptada manualmente por mí para cumplir con la consigna de promoción 
+directa (nota mínima 8). La IA se usó como asistente de diseño y estructura. 

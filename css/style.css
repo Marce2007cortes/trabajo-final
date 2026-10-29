@@ -1,0 +1,308 @@
+:root{
+  /* MI PALETA */
+  --c1: #2A3056;
+  --c2: #43B0AF;
+  --c3: #67FFF2;
+  --c4: #294933;
+  --c5: #446B5C;
+  --c6: #81EC86;
+
+  --primario: var(--c3);
+  --acento: var(--c6);
+  --fondo: var(--c1);
+  --fondo-alt: var(--c4);
+  --card: var(--c5);
+  --texto: #FFFFFF;
+  --fuente-titulo: 'Poppins', sans-serif;
+  --fuente-texto: 'Inter', sans-serif;
+}
+
+body{ font-family: var(--fuente-texto); background: var(--fondo); color: var(--texto); }
+
+.navbar{ display:flex; justify-content:space-between; align-items:center; padding:1.2rem 2rem; background: var(--c1); position:sticky; top:0; border-bottom:1px solid var(--c5); }
+.logo{ color: var(--c3); font-family: var(--fuente-titulo); font-weight:700; font-size: 24px;}
+.nav-links{ display:flex; gap:25px; list-style:none; }
+.nav-links a{ color:white; text-decoration:none; }
+.nav-links a:hover{ color: var(--c3); }
+
+.hero{ display:grid; grid-template-columns:1fr 1fr; padding:5rem 2rem; background: linear-gradient(135deg, var(--c1), var(--c4)); }
+.hero h1 span{ color: var(--c6); }
+.saldo-card{ background: var(--c4); border-left:6px solid var(--c6); padding:1.8rem; border-radius:16px; max-width:380px; }
+
+.btn-primary{ background: var(--c3); color: var(--c1); border:none; padding:14px 28px; border-radius:30px; font-weight:700; }
+
+.grid-funciones{ display:grid; grid-template-columns: repeat(4,1fr); gap:20px; padding:2rem; }
+.card{ background: var(--card); padding:2rem; border-radius:18px; border:1px solid var(--c2); text-align:center; }
+.card i{ color: var(--c3); font-size:2rem; }
+
+.flex-beneficios{ display:flex; justify-content:space-around; flex-wrap:wrap; padding:2rem; }
+.media-container{ display:flex; gap:30px; justify-content:center; align-items:center; flex-wrap:wrap; }
+
+form{ display:flex; flex-direction:column; max-width:500px; margin:auto; gap:16px; }
+form input, form textarea{ padding:14px; border-radius:10px; border:1px solid var(--c5); background: rgba(255,255,255,0.05); color:white; }
+
+/* =================================
+   RESPONSIVE - MEDIDAS OFICIALES
+   Cumple requisito: celular y tablet
+   ================================= */
+
+/* TABLET: 768px a 1024px (iPad, tablets Android) */
+@media (max-width: 1024px) and (min-width: 769px){
+  .hero{
+    padding: 3rem 1.5rem;
+    gap: 20px;
+  }
+  .hero h1{
+    font-size: 2.6rem;
+  }
+  .grid-funciones{
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
+    gap: 18px;
+  }
+  .flex-beneficios{
+    gap: 15px;
+  }
+  .beneficio{
+    min-width: 140px;
+    padding: 1.5rem;
+  }
+  .media-container iframe{
+    width: 320px;
+    height: 180px;
+  }
+}
+
+/* TABLET CHICA / CELULAR GRANDE: 768px hacia abajo */
+@media (max-width: 768px){
+  .navbar{
+    flex-direction: column;
+    gap: 12px;
+    padding: 1rem;
+  }
+  .nav-links{
+    gap: 12px;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero{
+    grid-template-columns: 1fr; /* 1 columna */
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    min-height: auto;
+  }
+  .hero p{
+    margin: 15px auto;
+  }
+  .saldo-card{
+    margin: 20px auto;
+  }
+ 
+
+  .grid-funciones{
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+  }
+}
+
+
+/* CELULAR: 480px hacia abajo  */
+@media (max-width: 480px){
+  .hero h1{
+    font-size: 1.9rem;
+  }
+  .hero p{
+    font-size: 0.95rem;
+  }
+  
+  .grid-funciones{
+    grid-template-columns: 1fr; /* 1 sola columna en celular */
+    padding: 1rem;
+  }
+  
+  .flex-beneficios{
+    flex-direction: column;
+    align-items: center;
+  }
+  .beneficio{
+    width: 90%;
+  }
+
+  .media-container{
+    flex-direction: column;
+  }
+  .media-container iframe{
+    width: 100%;
+    max-width: 300px;
+    height: 170px;
+  }
+  .media-container img{
+    width: 90px;
+  }
+
+  form{
+    padding: 0 1rem;
+  }
+  form input, form textarea{
+    font-size: 16px; /* Evita zoom automático en iPhone */
+  }
+
+  #funciones h2, #beneficios h2, #app h2, #contacto h2{
+    font-size: 1.6rem;
+  }
+}
+.subtitulo{ text-align:center; color: #43B0AF; margin-bottom:2.5rem; }
+.grid-beneficios{ display:grid; grid-template-columns: repeat(3,1fr); gap:25px; padding:0 2rem; }
+.beneficio-full{ background: #446B5C; padding:2rem; border-radius:20px; border:1px solid #43B0AF; text-align:left; transition:0.3s; }
+.beneficio-full:hover{ transform: translateY(-5px); border-color: #67FFF2; }
+.icono-box{ width:55px; height:55px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:15px; }
+.tag{ display:inline-block; padding:5px 12px; border-radius:20px; font-size:0.8rem; margin-top:12px; font-weight:600; }
+
+.stats-bar{ display:flex; justify-content:space-around; background: #294933; margin:3rem 2rem 0 2rem; padding:1.5rem; border-radius:16px; border-left:4px solid #81EC86; text-align:center; }
+.stats-bar h4{ font-family:'Poppins'; font-size:1.6rem; color: #81EC86; }
+
+@media (max-width: 768px){
+  .grid-beneficios{ grid-template-columns:1fr; }
+  .stats-bar{ flex-direction:column; gap:15px; }
+}
+
+@media (max-width: 480px){
+  .hero-img img, .img-app, img[src*="WhatsApp"]{
+    max-width: 260px;
+    height: 320px;
+  }
+}
+/* PARA LAS 2 IMAGENES - QUE SE DESVANEZCAN EN EL FONDO */
+.hero-img img,
+.img-app,
+img[src*="WhatsApp"]{
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0px auto;
+/* Le saca el fondo negro */
+  mix-blend-mode: lighten;
+  
+  /* DIFUMINA LOS 4 LADOS */
+  -webkit-mask-image: 
+    linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  -webkit-mask-composite: destination-in;
+  mask-image: 
+    linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%),
+    linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-composite: intersect;
+}
+/* FUNCIONES - QUE SE MUEVAN AL PASAR EL MOUSE */
+.funciones-grid, .grid-funciones, .cards-funciones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.funcion-card, .card-funcion, .todo-card {
+  background: rgba(42, 92, 92, 0.8);
+  border-radius: 16px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: all 0.35s ease !important;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+/* EL MOVIMIENTO */
+.funcion-card:hover, .card-funcion:hover, .todo-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(103, 255, 242, 0.4);
+  border-color: #67FFF2;
+  background: rgba(103, 255, 242, 0.15) !important;
+  filter: brightness(1.2);
+}
+.funciones-page{ padding:60px 20px; text-align:center; }
+.funciones-page h1{ color:#67FFF2; font-size:32px; }
+.funciones-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap:25px;
+  max-width:1150px;
+  margin:40px auto;
+}
+.funcion-card{
+  background: rgba(62, 107, 107, 0.8);
+  border: 1px solid rgba(103,255,242,0.2);
+  border-radius:18px;
+  padding:25px 20px;
+  text-align:left;
+  transition: all 0.35s ease;
+}
+.funcion-card:hover{
+  transform: translateY(-12px) scale(1.03);
+  border-color:#67FFF2;
+  box-shadow: 0 15px 30px rgba(103,255,242,0.3);
+  background: rgba(103,255,242,0.15) !important;
+}
+.funcion-card .icono{ font-size:36px; margin-bottom:10px; }
+.funcion-card h3{ color:white; margin:5px 0; }
+.funcion-card p{ color:#b8d1d1; font-size:13px; margin-bottom:10px; }
+.funcion-card ul{ padding-left:18px; margin:10px 0; }
+.funcion-card ul li{ color:#ddd; font-size:12px; line-height:1.6; }
+.tag-funcion{
+  background:#67FFF2;
+  color:#0f2f2f;
+  font-size:10px;
+  padding:4px 10px;
+  border-radius:20px;
+  font-weight:bold;
+}
+.funcion-card.destaque{ border-color:#67FFF2; background: rgba(103,255,242,0.12); }
+/* BOTON ENVIAR - BRILLO CELESTE NEON */
+.btn-enviar, button[type="submit"]{
+  background: #67FFF2 !important;
+  color: #0f2f2f !important;
+  border: 2px solid #67FFF2 !important;
+  border-radius: 50px;
+  padding: 14px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* EL BRILLO CUANDO PASAS EL MOUSE */
+.btn-enviar:hover, button[type="submit"]:hover{
+  background: transparent !important;
+  color: #67FFF2 !important;
+  box-shadow: 
+    0 0 10px #67FFF2,
+    0 0 20px #67FFF2,
+    0 0 40px #67FFF2,
+    0 0 80px rgba(103,255,242,0.5);
+  text-shadow: 0 0 10px #67FFF2;
+  transform: scale(1.03);
+  border-color: #67FFF2 !important;
+}
+
+/* EFECTO EXTRA - LUZ QUE PASA POR EL BOTON */
+.btn-enviar::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.5s;
+}
+
+.btn-enviar:hover::before{
+  left: 100%;
+}
