@@ -2,7 +2,7 @@ MC Wallet - Billetera Virtual
 Escuela:Escuela Normal Superior N°40 Mariano Moreno - San Cristóbal, Santa Fe
 Carrera: Tecnicatura Superior en Desarrollo de Software
 Materia: Desarrollo Web / Trabajo Práctico Final Integrador
-Alumno: [REEMPLAZAR CON TU NOMBRE Y APELLIDO]
+Alumno: Marcela Cortes
 Año: 2026
 
 Descripción del sitio
